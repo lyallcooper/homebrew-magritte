@@ -24,7 +24,12 @@ class Magritte < Formula
 
   def install
     if OS.mac?
-      prefix.install "Magritte.app"
+      app = Pathname.glob("*.app").first
+      if app
+        prefix.install app
+      else
+        prefix.install buildpath => "Magritte.app"
+      end
       (bin/"magritte").write <<~SH
         #!/bin/sh
         exec "#{opt_prefix}/Magritte.app/Contents/MacOS/magritte" "$@"

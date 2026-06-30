@@ -27,6 +27,8 @@ class Magritte < Formula
       app = Pathname.glob("*.app").first
       if app
         prefix.install app
+      elsif (buildpath/"Contents").directory?
+        (prefix/"Magritte.app").install "Contents"
       else
         prefix.install buildpath => "Magritte.app"
       end

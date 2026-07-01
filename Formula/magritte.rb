@@ -16,7 +16,7 @@ class Magritte < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/lyallcooper/homebrew-magritte/releases/download/v0.3.0/magritte-v0.3.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "675d218c574397fd0ec5dae0296d061e3b9aedf9733de67333ddad560ce20931"
+      sha256 "e2f1b23e693b13a1ac8f33128784a32ac92ff715fa534b548224f0c8e9ab9a47"
     else
       odie "Magritte currently ships a Linux x86_64 artifact only"
     end

@@ -14,7 +14,12 @@ class Magritte < Formula
   end
 
   on_linux do
-    odie "Magritte does not yet ship a Linux artifact for this release"
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/lyallcooper/homebrew-magritte/releases/download/v0.3.0/magritte-v0.3.0-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "675d218c574397fd0ec5dae0296d061e3b9aedf9733de67333ddad560ce20931"
+    else
+      odie "Magritte currently ships a Linux x86_64 artifact only"
+    end
   end
 
   def install

@@ -1,5 +1,5 @@
 class Magritte < Formula
-  desc "Standalone macOS git client in the spirit of Magit"
+  desc "Standalone git client in the spirit of Magit. Ceci n'est pas Magit."
   homepage "https://github.com/lyallcooper/magritte"
   version "0.2.0"
   license "MIT"

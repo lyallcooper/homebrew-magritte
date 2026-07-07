@@ -1,13 +1,13 @@
 class Magritte < Formula
   desc "Standalone macOS git client in the spirit of Magit"
   homepage "https://github.com/lyallcooper/magritte"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/lyallcooper/homebrew-magritte/releases/download/v0.3.0/magritte-v0.3.0-aarch64-apple-darwin.tar.gz"
-      sha256 "91ae0251fd7f995b598bb5040fbfba2ecf8a7b4deac2b6012144008d1357582d"
+      url "https://github.com/lyallcooper/homebrew-magritte/releases/download/v0.4.0/magritte-v0.4.0-aarch64-apple-darwin.tar.gz"
+      sha256 "af95993fc92d57fe8bad91ed73aa0f4c322fea89032e60089e42353e25c50671"
     else
       odie "Magritte currently ships a macOS Apple Silicon artifact only"
     end

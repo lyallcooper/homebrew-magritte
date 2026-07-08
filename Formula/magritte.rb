@@ -7,7 +7,7 @@ class Magritte < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/lyallcooper/homebrew-magritte/releases/download/v0.5.0/magritte-v0.5.0-aarch64-apple-darwin.tar.gz"
-      sha256 "9708e356c64c4150621b66084bfa45880ccbc242b50e690dc0250bd9860a293f"
+      sha256 "fa2a4bc41c4bc15a9dd9c587fbe0f50331c4508c9b23a8a9ef6c96eabb511715"
     else
       odie "Magritte currently ships a macOS Apple Silicon artifact only"
     end
@@ -16,7 +16,7 @@ class Magritte < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/lyallcooper/homebrew-magritte/releases/download/v0.5.0/magritte-v0.5.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "e3287710e852007bbac208ee35974a2021cf88bac4caa8e8d30b6aa10cee26e8"
+      sha256 "82262b2d2730ad4ffcd02f773204411afd1753de83f61da94a1bd70c2787375d"
     else
       odie "Magritte currently ships a Linux x86_64 artifact only"
     end

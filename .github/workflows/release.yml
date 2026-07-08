@@ -120,5 +120,6 @@ jobs:
             echo "Homebrew formula unchanged"
           else
             git commit -m "Update Magritte to $TAG"
+            git pull --rebase origin main
             git push
           fi

@@ -1,13 +1,13 @@
 class Magritte < Formula
   desc "Standalone macOS git client in the spirit of Magit"
   homepage "https://github.com/lyallcooper/magritte"
-  version "0.8.0"
+  version "0.8.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/lyallcooper/magritte/releases/download/v0.8.0/magritte-v0.8.0-aarch64-apple-darwin.tar.gz"
-      sha256 "866698cc7534d1c8bf91ba3e3e8149562d9a7bb3216ea1bb3dc559fe460392d8"
+      url "https://github.com/lyallcooper/magritte/releases/download/v0.8.1/magritte-v0.8.1-aarch64-apple-darwin.tar.gz"
+      sha256 "41346d4caca7edcf7fa81c1c88dc6154dddb278adaa885c73e52667c0e2ff4f2"
     else
       odie "Magritte currently ships a macOS Apple Silicon artifact only"
     end
@@ -15,8 +15,8 @@ class Magritte < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/lyallcooper/magritte/releases/download/v0.8.0/magritte-v0.8.0-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "19895f230cf4f5fb4cd1efbd8a5aa0fd649decba257bd95463b2414bc23f356f"
+      url "https://github.com/lyallcooper/magritte/releases/download/v0.8.1/magritte-v0.8.1-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "16b5f8d1647bb945b2be6f3d5e1f3807f2fe97abd3532076eef01640f8904d77"
     else
       odie "Magritte currently ships a Linux x86_64 artifact only"
     end
